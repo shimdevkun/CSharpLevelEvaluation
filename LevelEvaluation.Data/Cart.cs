@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace LevelEvaluation.Data
 {
@@ -27,6 +26,8 @@ namespace LevelEvaluation.Data
         public void AddProduct(Product product)
         {
             // TODO: Implement the following method to match the description above
+            Products.Add(product);
+            Total += product.Price;
         }
 
         /// <summary>
@@ -38,10 +39,19 @@ namespace LevelEvaluation.Data
         /// }
         /// Output: Cookies, Bread, Milk
         /// </summary>
-        private string ListProducts()
+        public string ListProducts()
         {
             // TODO: Implement the following method to match the description above
-            throw new NotImplementedException(); // comment this line when the implementation is done
+            string message = "";
+            int length = this.Products.Count;
+            if (length > 0)
+            {
+                for (int i = 0; i < length - 1; i++)
+                    message += Products[i].Name + ", ";
+                message += this.Products[length - 1].Name;
+            }
+            return message;
+            //throw new NotImplementedException(); // comment this line when the implementation is done
         }
     }
 }

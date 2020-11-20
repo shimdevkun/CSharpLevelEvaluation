@@ -33,15 +33,19 @@ namespace Q3_StoreApp
                 // * 4 Cookies 3.75
                 // * 5 Cereal 4.00
                 // * 6 Milk 4.50
+                Console.WriteLine("Here is the list of our products:");
+                store.DisplayProducts();
 
                 Console.WriteLine();
 
                 // * Enter a number to add a product to your cart
                 // * or c to proceed to checkout
+                Console.WriteLine("Enter a number to add a product to your cart");
+                Console.WriteLine("or c to proceed to checkout");
 
                 // -- 4 --
                 // TODO: Store the user's choice in the choice variable
-
+                choice = Console.ReadLine()[0];
 
                 // -------------- SCENARIOS --------------
                 // *** SCENARIO 1: user enters c ***
@@ -61,10 +65,35 @@ namespace Q3_StoreApp
                 // TODO: If SCENARIO 1: Print the customer's cart info
                 // TODO: If SCENARIO 2: Add the product to the user's cart and indicate it to the user
                 // TODO: If SCENARIO 3: Tell the user that the product is already in their cart
+                if (choice == checkout)
+                {
 
+                    Console.WriteLine("Your cart contains the following items:");
+                    Console.WriteLine(customer.Cart.ListProducts());
+                    Console.WriteLine("Your total is $" + customer.Cart.Total.ToString("0.00"));
+                    Console.WriteLine("Thank you for shopping at StoreApp");
+                }
+                else
+                {
+                    int index = int.Parse(choice.ToString()) - 1;
+                    if (!store.IsProductInCart(index, customer.Cart))
+                    {
+                        Product product = store.GetProductAtIndex(index);
+                        customer.Cart.AddProduct(product);
+                        Console.WriteLine("You have successfully added " + product.Name);
+                    } 
+                    else
+                    {
+                        Console.WriteLine("This product is already in your cart");
+                    }
+                }
 
                 Console.WriteLine();
             }
+
+            Console.WriteLine();
+            Console.WriteLine("Press any key to continue . . .");
+            Console.ReadKey();
         }
     }
 }

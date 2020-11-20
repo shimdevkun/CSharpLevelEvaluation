@@ -22,6 +22,12 @@ namespace LevelEvaluation.Data
         public void DisplayProducts()
         {
             // TODO: Implement this method to match the description above
+            int length = this.Products.Count;
+            for (int i = 0; i < length - 1; i++)
+            {
+                string productInfo = $"{i+1} {Products[i].Name} {Products[i].Price}";
+                Console.WriteLine(productInfo);
+            }
         }
 
         /// <summary>
@@ -31,7 +37,17 @@ namespace LevelEvaluation.Data
         public bool IsProductInCart(int index, Cart cart)
         {
             // TODO: Implement this method to match the description above
-            throw new NotImplementedException();
+            Product product = Products[index];
+            return cart.Products.Contains(product);
+            //throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Returns the product at the index specified
+        /// </summary>
+        public Product GetProductAtIndex(int index)
+        {
+            return Products[index];
         }
 
         // ----------------------------------------------
@@ -52,7 +68,7 @@ namespace LevelEvaluation.Data
             string[] names = { "Apple", "Juice", "Bread", "Cookies", "Cereal", "Milk" };
             double[] prices = { 1.00, 7.50, 2.50, 3.75, 4.00, 4.50 };
 
-            for (int i = 0; i < Products.Count; i++)
+            for (int i = 0; i < names.Length; i++)
                 Products.Add(new Product(names[i], prices[i]));
         }
         #endregion

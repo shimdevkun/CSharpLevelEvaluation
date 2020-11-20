@@ -69,7 +69,7 @@
             string message = "";
             int length = this._languages.Length;
             for (int i = 0; i < length - 1; i++)
-                message += this._languages[i] + ",";
+                message += this._languages[i] + ", ";
             message += this._languages[length - 1];
             return message;
             //throw new NotImplementedException(); // comment this line when the implementation is done
