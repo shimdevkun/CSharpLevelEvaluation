@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace LevelEvaluation.Data
+﻿namespace LevelEvaluation.Data
 {
     /// <summary>
     /// This class represents a person's entity. It contains their name, age,
@@ -18,17 +16,19 @@ namespace LevelEvaluation.Data
         /// <summary>
         /// This getter returns the person's name
         /// </summary>
+        public string Name { get; }
 
         // TODO: Implement a getter for the person's age
         /// <summary>
         /// This getter returns the person's age
         /// </summary>
+        public int Age { get; }
 
         // TODO: Implement a getter for the person's country
         /// <summary>
         /// This getter returns the person's country
         /// </summary>
-
+        public string Country { get; }
 
         // TODO: Implement a constructor with a name as parameter
         /// <summary>
@@ -38,12 +38,25 @@ namespace LevelEvaluation.Data
         /// country: "Canada"
         /// languages: [ "English", "French" ]
         /// </summary>
+        public Person(string name)
+        {
+            this._name = name;
+            this._age = 25;
+            this._country = "Canada";
+            this._languages = new string[]{ "English", "French"};
+        }
 
         // TODO: Implement a constructor with parameters for each field
         /// <summary>
         /// This constructor takes data for all fields.
         /// </summary>
-
+        public Person(string name, int age, string country, string[] languages)
+        {
+            this._name = name;
+            this._age = age;
+            this._country = country;
+            this._languages = languages;
+        }
 
         /// <summary>
         /// This method returns a string with all the languages spoken.
@@ -53,7 +66,13 @@ namespace LevelEvaluation.Data
         private string ListLanguages()
         {
             // TODO: Implement the following method to match the description above
-            throw new NotImplementedException(); // comment this line when the implementation is done
+            string message = "";
+            int length = this._languages.Length;
+            for (int i = 0; i < length - 1; i++)
+                message += this._languages[i] + ",";
+            message += this._languages[length - 1];
+            return message;
+            //throw new NotImplementedException(); // comment this line when the implementation is done
         }
 
 
