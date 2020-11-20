@@ -38,7 +38,7 @@ namespace LevelEvaluation.Data
         /// }
         /// Output: Cookies, Bread, Milk
         /// </summary>
-        private string ListProducts()
+        public string ListProducts()
         {
             // TODO: Implement the following method to match the description above
             throw new NotImplementedException(); // comment this line when the implementation is done

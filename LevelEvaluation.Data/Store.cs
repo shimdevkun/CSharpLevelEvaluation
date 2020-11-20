@@ -34,9 +34,19 @@ namespace LevelEvaluation.Data
             throw new NotImplementedException();
         }
 
+
         // ----------------------------------------------
-        // -------- DO NOT MODIFY THE SETUP CODE --------
+        // -------- DO NOT MODIFY THE CODE BELOW --------
         // ----------------------------------------------
+
+        /// <summary>
+        /// Returns the product at the index specified
+        /// </summary>
+        public Product GetProductAtIndex(int index)
+        {
+            return Products[index];
+        }
+
         #region SETUP
         public Store()
         {
@@ -52,7 +62,7 @@ namespace LevelEvaluation.Data
             string[] names = { "Apple", "Juice", "Bread", "Cookies", "Cereal", "Milk" };
             double[] prices = { 1.00, 7.50, 2.50, 3.75, 4.00, 4.50 };
 
-            for (int i = 0; i < Products.Count; i++)
+            for (int i = 0; i < names.Length; i++)
                 Products.Add(new Product(names[i], prices[i]));
         }
         #endregion
