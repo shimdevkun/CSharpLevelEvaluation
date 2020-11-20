@@ -6,7 +6,7 @@ namespace Q1_Sequences
     {
         static void Main(string[] args)
         {
-            //TestMethods();
+            TestMethods();
 
             Console.WriteLine("Press any key to continue . . .");
             Console.ReadKey();
@@ -25,6 +25,8 @@ namespace Q1_Sequences
         public static void PrintOddNumbers()
         {
             // TODO: Implement this method to match the description above
+            for (int i = 1; i < 10; i += 2)
+                Console.WriteLine(i);
         }
 
         /// <summary>
@@ -41,6 +43,9 @@ namespace Q1_Sequences
         public static void PrintMultiplesOf2And3()
         {
             // TODO: Implement this method to match the description above
+            for (int i = 1; i < 10; i += 2)
+                if (i % 2 == 0 && i % 3 == 0)
+                    Console.WriteLine(i);
         }
 
 
@@ -51,6 +56,8 @@ namespace Q1_Sequences
         public static void PrintLine()
         {
             // TODO: Implement this method to match the description above
+            for (int i = 0; i < 10; i++)
+                Console.Write("*");
         }
 
         /// <summary>
@@ -61,6 +68,9 @@ namespace Q1_Sequences
         public static void PrintLineComplex()
         {
             // TODO: Implement this method to match the description above
+            for (int i = 0; i < 10; i++)
+                if (i % 2 == 0) Console.Write("*");
+                else Console.Write("-");
         }
 
         /// <summary>
@@ -72,6 +82,16 @@ namespace Q1_Sequences
         public static void PrintRectangle()
         {
             // TODO: Implement this method to match the description above
+            for (int i = 0; i < 3; i++)
+                Console.Write("*");
+            Console.WriteLine();
+
+            Console.Write("*");
+            Console.Write(" ");
+            Console.WriteLine("*");
+
+            for (int i = 0; i < 3; i++)
+                Console.Write("*");
         }
 
         /// <summary>
@@ -87,6 +107,21 @@ namespace Q1_Sequences
         public static void PrintRectangleComplex(int length)
         {
             // TODO: Implement this method to match the description above
+            for (int i = 0; i < length; i++)
+                Console.Write("*");
+            Console.WriteLine();
+
+
+            for (int i = 0; i < length - 2; i++)
+            {
+                Console.Write("*");
+                for (int j = 0; j < length - 2; j++)
+                    Console.Write(" ");
+                Console.WriteLine("*");
+            }
+
+            for (int i = 0; i < length; i++)
+                Console.Write("*");
         }
 
         /// <summary>
@@ -99,6 +134,21 @@ namespace Q1_Sequences
         public static void PrintTriangle()
         {
             // TODO: Implement this method to match the description above
+            int height = 3;
+            int stars = 1;
+
+            for (int i = 0; i < height; i++, stars += 2)
+            {
+                for (int j = 0; j < height - i; j++)
+                    Console.Write(" ");
+
+                for (int j = 0; j < stars; j++)
+                    Console.Write("*");
+
+                for (int j = 0; j < height - i; j++)
+                    Console.Write(" ");
+                Console.WriteLine();
+            }
         }
 
 
