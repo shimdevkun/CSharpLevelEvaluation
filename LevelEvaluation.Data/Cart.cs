@@ -30,13 +30,18 @@ namespace LevelEvaluation.Data
         }
 
         /// <summary>
-        /// This method checks if the cart contains the product
-        /// passed as parameter.
+        /// This method returns a string with all the products in the cart.
+        /// Ex.: Products = {
+        ///   new Product(Cookies, 2.50),
+        ///   new Product(Bread, 5.00),
+        ///   new Product(Milk, 3.75)
+        /// }
+        /// Output: Cookies, Bread, Milk
         /// </summary>
-        public bool IsProductInCart(Product product)
+        private string ListProducts()
         {
-            // TODO: Implement this method to match the description above
-            throw new NotImplementedException();
+            // TODO: Implement the following method to match the description above
+            throw new NotImplementedException(); // comment this line when the implementation is done
         }
     }
 }

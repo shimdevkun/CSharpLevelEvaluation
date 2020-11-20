@@ -14,6 +14,7 @@ namespace Q1_Sequences
 
         /// <summary>
         ///     This method prints all odd numbers from 0 to 10 using a loop.
+        ///     You should not use an if statement
         ///     Output:
         ///     1
         ///     3

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace LevelEvaluation.Data
 {
@@ -8,7 +9,7 @@ namespace LevelEvaluation.Data
 
         /// <summary>
         /// This method prints all the products available.
-        /// Ex.: products = {
+        /// Ex.: Products = {
         ///   new Product(Cookies, 2.50),
         ///   new Product(Bread, 5.00),
         ///   new Product(Milk, 3.75)
@@ -21,6 +22,16 @@ namespace LevelEvaluation.Data
         public void DisplayProducts()
         {
             // TODO: Implement this method to match the description above
+        }
+
+        /// <summary>
+        /// This method retrieves the product at the index specified.
+        /// It then checks if the cart contains the product.
+        /// </summary>
+        public bool IsProductInCart(int index, Cart cart)
+        {
+            // TODO: Implement this method to match the description above
+            throw new NotImplementedException();
         }
 
         // ----------------------------------------------

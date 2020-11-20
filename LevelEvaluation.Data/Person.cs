@@ -47,7 +47,7 @@ namespace LevelEvaluation.Data
 
         /// <summary>
         /// This method returns a string with all the languages spoken.
-        /// Ex.: languages = [ "French", "Spanish", "Italian", "Japanese" ]
+        /// Ex.: languages = { "French", "Spanish", "Italian", "Japanese" }
         /// Output: French, Spanish, Italian, Japanese
         /// </summary>
         private string ListLanguages()
