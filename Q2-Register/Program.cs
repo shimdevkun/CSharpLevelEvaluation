@@ -33,6 +33,11 @@ namespace Q2_Register
             // * Hey there! My name is Max.
             // * I am from the United States and I am 25 years old.
             // * I speak the following languages: English, French, Japanese.
+
+
+            Console.WriteLine();
+            Console.WriteLine("Press any key to continue . . .");
+            Console.ReadKey();
         }
     }
 }
